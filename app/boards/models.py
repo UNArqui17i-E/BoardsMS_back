@@ -11,10 +11,10 @@ from app.utils.misc import make_code
 class AppBoard(db.Model):
 
     id = db.Column(db.Integer(), primary_key=True)
-    user = db.Column(db.Integer(), unique=True)
+    user = db.Column(db.Integer())
     name = db.Column(db.String(255))
-    order = db.Column(db.Integer(), unique=True)
-    modified = db.Column(db.String(255), unique=True)
+    order = db.Column(db.Integer())
+    modified = db.Column(db.String(255))
 
     def __init__(self, user, name, order):
         self.user = user
