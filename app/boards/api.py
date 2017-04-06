@@ -97,3 +97,11 @@ class BoardsByUserAPI(SignupLoginMixin, restful.Resource):
         #return bo
         boards = db.session.query(AppBoard).filter(AppBoard.user==ide).all()
         return boards
+
+class Board(SignupLoginMixin, restful.Resource):
+
+    #@auth_required
+    @marshal_with(board_fields)
+    def get(self):
+        boards = db.session.query(AppBoard).all()
+        return boards
