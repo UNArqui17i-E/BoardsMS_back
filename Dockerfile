@@ -8,10 +8,7 @@ RUN apt-get install -y python-pip python-psycopg2 libpq-dev python2.7-dev gunico
 
 RUN mkdir /code
 ADD . /code/
-COPY . /code/
 WORKDIR /code
-ENTRYPOINT python -u run.py
 RUN pip install -r requirements.txt
-
 
 EXPOSE 5000
