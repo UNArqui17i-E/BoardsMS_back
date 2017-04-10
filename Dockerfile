@@ -10,5 +10,6 @@ RUN mkdir /code
 ADD . /code/
 WORKDIR /code
 RUN pip install -r requirements.txt
+RUN pip install -U flask-cors
 
 EXPOSE 5000
