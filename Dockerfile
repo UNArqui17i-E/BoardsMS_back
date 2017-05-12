@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-
+#dockerhub
 RUN apt-get update -qq
 RUN apt-get install -y socat git software-properties-common python-software-properties postgresql-client-9.3 postgresql-client-common
 
