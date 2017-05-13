@@ -10,8 +10,6 @@ RUN mkdir /code
 ADD /code/
 WORKDIR /code
 RUN pip install -r requirements.txt
-RUN python run.py db migrate
-RUN python run.py db upgrade
 
 
 EXPOSE 5000
