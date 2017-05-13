@@ -7,7 +7,7 @@ RUN apt-get update -qq
 RUN apt-get install -y python-pip python-psycopg2 libpq-dev python2.7-dev gunicorn libmagic1
 
 RUN mkdir /code
-ADD /code/
+ADD . /code/
 WORKDIR /code
 RUN pip install -r requirements.txt
 
