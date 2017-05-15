@@ -6,11 +6,11 @@ from flask.ext.migrate import Migrate, MigrateCommand
 from flask.ext.script import Manager
 from flask_redis import Redis
 from flask.ext.script import Manager
-from flask_cors import CORS, cross_origin
+# from flask_cors import CORS, cross_origin
 
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 app.config.from_object('config')
 
 rest_api = restful.Api(app)
