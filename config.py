@@ -12,10 +12,6 @@ PORT = os.getenv('PORT', 5000)
 SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL',
     'postgres://docker:docker@{0}/docker'.format(os.getenv('DB_1_PORT_5432_TCP_ADDR')))
 
-DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
-}
-
 SECRET_KEY = os.getenv('SECRET_KEY', None)
 assert SECRET_KEY
 
